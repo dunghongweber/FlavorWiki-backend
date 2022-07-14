@@ -29,7 +29,7 @@ let PORT = process.env.PORT || 4000; //port for Heroky deployment
 
 //connect to database
 mongoose
-  .connect(dbConnectionStringDeploy)
+  .connect(dbConnectionString)
   .then(() => {
     //listens for requests
     app.listen(process.env.PORT, () => {
