@@ -20,13 +20,14 @@ app.use(cors()); //handle cors
 //routes for express app
 app.use("/api/records", recordRoutes);
 
+let deployPort = process.env.PORT || process.env.MY_PORT;
 //connect to database
 mongoose
   .connect(dbConnectionString)
   .then(() => {
     //listens for requests
-    app.listen(process.env.PORT, () => {
-      console.log(`Connected to DB, listening on port: ${process.env.PORT}`);
+    app.listen(deployPort, () => {
+      console.log(`Connected to DB, listening on port: ${deployPort}`);
     });
   })
   .catch((err) => console.log(err));
