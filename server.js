@@ -6,6 +6,8 @@ const cors = require("cors");
 //database connection string
 const dbConnectionString = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.kv48y.mongodb.net/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`;
 
+const dbConnectionStringDeploy = `mongodb+srv://dunghong123:pass123word456@cluster0.kv48y.mongodb.net/WorkoutApp?retryWrites=true&w=majority`;
+
 //record routes
 const recordRoutes = require("./routes/records");
 
@@ -25,7 +27,7 @@ app.use("/api/records", recordRoutes);
 let PORT = process.env.PORT || 4000;
 //connect to database
 mongoose
-  .connect(dbConnectionString)
+  .connect(dbConnectionStringDeploy)
   .then(() => {
     //listens for requests
     app.listen(PORT, () => {
