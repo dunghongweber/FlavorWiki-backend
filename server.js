@@ -6,6 +6,7 @@ const cors = require("cors");
 //database connection string
 const dbConnectionString = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.kv48y.mongodb.net/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`;
 
+//database connection string for Heroky deployment
 const dbConnectionStringDeploy = `mongodb+srv://dunghong123:pass123word456@cluster0.kv48y.mongodb.net/WorkoutApp?retryWrites=true&w=majority`;
 
 //record routes
