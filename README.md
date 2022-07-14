@@ -10,4 +10,4 @@
 
 ### CORS npm
 
-by Dung Hong
+The backend can be run locally on port 4000 as defined in .env file
